@@ -86,7 +86,7 @@ scrape_configs:
 
   - job_name: "sdwan"
     static_configs:
-      - targets: ["localhost:8000"]
+      - targets: ["localhost:8000/metrics"]
 ```
 
 Validate config:
