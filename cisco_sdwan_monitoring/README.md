@@ -28,11 +28,6 @@ login_url = f"{HOST}/j_security_check"
 payload = {"j_username": USERNAME, "j_password": PASSWORD}
 resp = session.post(login_url, data=payload, verify=False)
 
-if resp.status_code != 200 or "JSESSIONID" not in session.cookies:
-    raise Exception("Login failed!")
-
-print("Logged in successfully")
-
 @app.route("/metrics")
 def metrics():
     try:
