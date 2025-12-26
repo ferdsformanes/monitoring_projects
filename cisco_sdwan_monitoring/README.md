@@ -60,7 +60,7 @@ python sdwan_exporter_flask.py
 
 Test in browser:
 ```
-http://localhost:8000/metrics
+http://localhost:8000
 ```
 
 ---
@@ -81,7 +81,7 @@ scrape_configs:
 
   - job_name: "sdwan"
     static_configs:
-      - targets: ["localhost:8000/metrics"]
+      - targets: ["localhost:8000"]
 ```
 
 Validate config:
