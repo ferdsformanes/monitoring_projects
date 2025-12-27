@@ -41,3 +41,7 @@ This guide explains how to run **Prometheus** as a Windows service using **NSSM 
 ### Notes:
 - Ensure Prometheus and its configuration file (`prometheus.yml`) are located in `C:\Prometheus`.
 - NSSM is used because Windows does not natively support running `.exe` files as services.
+- nssm stop Prometheus
+- nssm start Prometheus
+- nssm edit Prometheus
+
