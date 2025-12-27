@@ -5,7 +5,7 @@ This guide explains how to run **Prometheus** as a Windows service using **NSSM 
 ---
 
 ## ✅ Step 1: Download and Install NSSM
-1. Go to [https://nssm.cc/download](https://nssm.cc/download).
+1. Go to https://nssm.cc/download
 2. Download the latest stable version for Windows.
 3. Extract the archive and place `nssm.exe` in a folder (e.g., `C:\nssm`).
 
