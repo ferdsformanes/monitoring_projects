@@ -4,15 +4,15 @@ This guide explains how to run a Python-based SD-WAN Prometheus exporter as a **
 
 ---
 
-Run sdwan_exporter.py as a Windows Service (NSSM)
+Run sdwan_exporter_flask.py as a Windows Service (NSSM)
 
 1) Prerequisites
 - Windows 10/11
 - Python installed (python --version)
-- sdwan_exporter.py runs manually
+- sdwan_exporter_flask.py runs manually
 - Example paths:
-  Python: C:\Python312\python.exe
-  Script: C:\sdwan\sdwan_exporter.py
+  Python: C:\Users\user\AppData\Local\Programs\Python\Python313\python.exe
+  Script: C:\sdwan\sdwan_exporter_flask.py
 
 2) Download NSSM
 - https://nssm.cc/download
@@ -21,36 +21,40 @@ Run sdwan_exporter.py as a Windows Service (NSSM)
 3) Install Service
 - Open Command Prompt as Administrator
 - Run:
-  C:\nssm\win64\nssm.exe install SDWAN_Exporter
+  C:\nssm\win64\nssm.exe install sdwan_exporter_flask
 
 Application tab:
-- Path: C:\Python312\python.exe
-- Arguments: sdwan_exporter.py
+- Path: C:\Users\user\AppData\Local\Programs\Python\Python313\python.exe
+- Arguments: sdwan_exporter_flask.py
 - Startup directory: C:\sdwan
 - Click Install service
 
 4) Start Service
 - Command line:
-  nssm start SDWAN_Exporter
+  nssm start sdwan_exporter_flask
 - Or:
-  services.msc → SDWAN_Exporter → Start
+  services.msc → sdwan_exporter_flask → Start
 
 5) Verify
 - Browser:
   http://localhost:8000/metrics
 - Prometheus:
-  Status → Targets → sdwan_exporter = UP
+  Status → Targets → sdwan_exporter_flask = UP
 
 6) Optional: Auto-Restart & Logs
-- nssm edit SDWAN_Exporter
+- nssm edit sdwan_exporter_flask
 - Exit Actions: Restart, Delay 5000ms
 - I/O:
-  stdout: C:\sdwan\sdwan_exporter.out.log
-  stderr: C:\sdwan\sdwan_exporter.err.log
+  stdout: C:\sdwan\sdwan_exporter_flask.out.log
+  stderr: C:\sdwan\sdwan_exporter_flask.err.log
 
-7) Stop / Remove
-- nssm stop SDWAN_Exporter
-- nssm remove SDWAN_Exporter confirm
+7) Stop / Remove / Status
+- nssm stop sdwan_exporter_flask
+- nssm remove sdwan_exporter_flask confirm
+- nssm status sdwan_exporter_flask
+- nssm start sdwan_exporter_flask
+
+
 
 ---
 
