@@ -1,5 +1,3 @@
-# Bulk Import Hosts in Centreon
-
 ## ✅ Steps to Import Multiple Hosts Using CSV
 
 1. **Prepare the CSV File**  
@@ -25,6 +23,3 @@
    - Go to **Monitoring → Hosts**.
    - Ensure all imported hosts show **UP** and services are listed.
 
----
-
-✅ Done! You have successfully added multiple hosts to Centreon using bulk import.
