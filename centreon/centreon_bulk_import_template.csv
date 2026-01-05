@@ -1,0 +1,4 @@
+name;alias;address;template
+Switch01;CoreSwitch;192.168.1.10;Generic-SNMP-Switch
+Switch02;AccessSwitch;192.168.1.11;Generic-SNMP-Switch
+Switch03;DistributionSwitch;192.168.1.12;Generic-SNMP-Switch
