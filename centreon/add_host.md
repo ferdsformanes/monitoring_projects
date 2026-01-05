@@ -1,7 +1,5 @@
 # Steps to Add a Host in Centreon
 
-## ✅ Quick Steps
-
 1. **Log in to Centreon Web UI**  
    Go to `http://<Centreon-IP>/centreon` and log in as admin.
 
