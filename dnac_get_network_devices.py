@@ -10,7 +10,7 @@ USERNAME = "devnetuser"
 PASSWORD = "Cisco123!"
 
 
-def get_token(username: str, password: str) -> str:
+def get_token(username, password):
     """Authenticate to DNA Center and return auth token."""
     url = f"{BASE_URL}/api/system/v1/auth/token"
 
@@ -25,7 +25,7 @@ def get_token(username: str, password: str) -> str:
     return response.json()["Token"]
 
 
-def get_dna_data(token: str, endpoint: str) -> dict:
+def get_dna_data(token, endpoint):
     """Retrieve data from a DNA Center API endpoint."""
     url = f"{BASE_URL}/api/v1/{endpoint}"
     headers = {
