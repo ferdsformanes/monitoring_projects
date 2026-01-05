@@ -1,7 +1,5 @@
 # Centreon Installation via OVA on VMware
 
-## ✅ Quick Steps
-
 1. **Download the Centreon OVA**  
    - Go to [Centreon Download Page](https://download.centreon.com/) and get the latest OVA file.
 
@@ -26,6 +24,4 @@
    - Open browser → `http://<VM-IP>/centreon`.  
    - Complete the initial setup wizard (DB and admin account are usually pre-configured).
 
----
 
-✅ Done! You now have a fully working Centreon server without manual Linux installation.
