@@ -42,4 +42,5 @@ This guide explains how to run **Prometheus** as a Windows service using **NSSM 
 - nssm stop Prometheus
 - nssm start Prometheus
 - nssm edit Prometheus
+- nssm remove Prometheus confirm
 
