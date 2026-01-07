@@ -1,4 +1,7 @@
 # Monitoring Cisco Switches with Prometheus and Grafana
+
+Since Prometheus and Grafana are already installed, follow these steps to integrate Cisco switches:
+
 ---
 
 ## ✅ 1. Enable SNMP on Cisco Switch
@@ -69,3 +72,51 @@ Restart Prometheus.
 - Use **Alertmanager** for alerts.
 - Secure SNMP with **SNMPv3** for authentication and encryption.
 - Add multiple switches in `prometheus.yml`.
+
+---
+
+## ✅ Additional Steps for WSL Setup
+If you are using **Windows Subsystem for Linux (WSL)**, you can run SNMP Exporter using the Linux build:
+
+### 1. Download SNMP Exporter on WSL
+```bash
+cd /opt
+wget https://github.com/prometheus/snmp_exporter/releases/download/v0.29.0/snmp_exporter-0.29.0.linux-amd64.tar.gz
+tar xvf snmp_exporter-0.29.0.linux-amd64.tar.gz
+cd snmp_exporter-0.29.0.linux-amd64
+```
+
+### 2. Run SNMP Exporter
+```bash
+./snmp_exporter --config.file=snmp.yml
+```
+Default port: `9116`.
+
+### 3. Generate Cisco SNMP Config
+Edit `generator.yml` and run:
+```bash
+./generator generate
+```
+This creates `snmp.yml` for Cisco devices.
+
+---
+
+## ✅ Prometheus Scrape Configuration for WSL
+Add the following to your `prometheus.yml`:
+```yaml
+scrape_configs:
+  - job_name: 'cisco-switches'
+    static_configs:
+      - targets: ['<switch_ip>']
+    metrics_path: /snmp
+    params:
+      module: [cisco]
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - target_label: instance
+        replacement: <switch_ip>
+      - target_label: __address__
+        replacement: localhost:9116
+```
+Restart Prometheus after updating the configuration.
