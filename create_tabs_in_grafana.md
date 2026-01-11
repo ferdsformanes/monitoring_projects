@@ -2,14 +2,14 @@
 
 ## Step 1: Open Your Dashboard
 - Navigate to the dashboard where you want to add tabs.
-- Click the **gear icon** (⚙️) in the top-right corner to open **Dashboard Settings**.
+- Click Edit, Settings or the **gear icon** (⚙️) in the top-right corner to open **Dashboard Settings**.
 
 ## Step 2: Go to Links Section
 - In the left menu of Dashboard Settings, click **Links**.
 - This is where you can add navigation links to other dashboards.
 
 ## Step 3: Add a New Dashboard Link
-- Click **Add Link**.
+- Click **Add Link**/**New Link**
 - Configure:
   - **Type:** Dashboard
   - **Dashboard:** Select the dashboard you want to link to.
