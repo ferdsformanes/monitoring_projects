@@ -1,4 +1,4 @@
-# Querying a Local JSON Endpoint in Grafana Using Infinity Datasource
+# How to Query JSON APIs in Grafana Using the Infinity Datasource (Table Panel)
 
 This guide explains how to query a local HTTP JSON endpoint (`http://localhost:8000/metrics`) in Grafana using the **Infinity datasource**, which is the recommended approach for table-based JSON data.
 
