@@ -1,36 +1,37 @@
-# How to Use Variables in Grafana | Make Your Dashboards Interactive
+# How to Create Variables in Grafana
 
 ## Step 1: Open a Dashboard
 
--   Open any Grafana dashboard
+* Open any existing Grafana dashboard
+  (or create a new one if needed)
 
-## Step 2: Add a Variable
+## Step 2: Go to Variables Settings
 
-1.  Click **Dashboard settings (⚙️)**
-2.  Click **Variables**
-3.  Click **Add variable**
+1. Click **Dashboard settings (⚙️)**
+2. Select **Variables**
+3. Click **Add variable**
 
-## Step 3: Create the Hostname Variable
+## Step 3: Create a Hostname Variable
 
--   **Name**: `hostname`
--   **Type**: `Query`
--   **Data source**: `PostgreSQL`
--   **Query**:
+* **Name**: `hostname`
+* **Type**: `Query`
+* **Data source**: `PostgreSQL`
+* **Query**:
 
-``` sql
+```sql
 SELECT hostname FROM network_devices ORDER BY hostname;
 ```
 
--   Click **Apply**
+* Click **Apply**
 
-A hostname dropdown appears at the top of the dashboard.
+A **hostname dropdown** will now appear at the top of the dashboard.
 
-## Step 4: Use the Variable in a Panel
+## Step 4: Use the Variable in a Panel Query
 
-1.  Add or edit a panel
-2.  Use this SQL query:
+1. Add a new panel or edit an existing one
+2. Use the following SQL query:
 
-``` sql
+```sql
 SELECT
   now() AS "time",
   ip_address,
@@ -43,23 +44,23 @@ FROM network_devices
 WHERE hostname = '$hostname';
 ```
 
-3.  Click **Apply**
+3. Click **Apply**
 
-## Step 5: Select from the Dropdown
+## Step 5: Filter Data Using the Dropdown
 
--   Select a hostname from the dropdown
--   The panel updates automatically
+* Select a hostname from the dropdown
+* The panel updates automatically based on your selection
 
-## Step 6: Choose the Right Panel Type
+## Step 6: Choose the Correct Panel Type
 
--   Use **Table panel** to display device details
+* Use a **Table panel** to display device details clearly
 
 ## Simple Explanation
 
-Grafana variables let you filter PostgreSQL data using a dropdown
-instead of editing SQL.
+Grafana variables allow you to dynamically filter PostgreSQL data using
+dropdowns, instead of manually editing SQL queries every time.
 
 ## Important Note
 
-Avoid showing **username and password** in dashboards unless this is
-strictly for lab or demo use.
+Avoid displaying **username and password** fields in dashboards unless
+this is strictly for lab or demo purposes.
