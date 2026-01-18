@@ -53,7 +53,6 @@ WHERE hostname = '$hostname';
 ## Step 6: Choose the Right Panel Type
 
 -   Use **Table panel** to display device details
--   Time column (`now() AS "time"`) is required for Grafana
 
 ## Simple Explanation
 
