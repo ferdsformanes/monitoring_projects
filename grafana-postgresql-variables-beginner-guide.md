@@ -16,7 +16,7 @@ This guide walks you through creating a **query-based variable** in Grafana and 
 1. Click **Edit** in the top-right corner to enter edit mode  
 2. Click **Dashboard settings (⚙️)** in the top toolbar  
 3. Select **Variables** from the left-side menu  
-4. Click **+ New variable**
+4. Click **+ Add variable**
 
 ---
 
@@ -24,8 +24,8 @@ This guide walks you through creating a **query-based variable** in Grafana and 
 
 In the variable configuration panel, set the following values:
 
-- **Name**: `hostname`  
 - **Type**: `Query`  
+- **Name**: `hostname`  
 - **Label**: `Device Name`  
 - **Data source**: `PostgreSQL`  
 - **Query**:
