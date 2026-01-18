@@ -1,4 +1,4 @@
-# How to Use Variables in Grafana (PostgreSQL -- Simple Steps)
+# How to Use Variables in Grafana | Make Your Dashboards Interactive
 
 ## Step 1: Open a Dashboard
 
