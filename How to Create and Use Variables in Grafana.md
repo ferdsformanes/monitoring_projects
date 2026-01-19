@@ -83,10 +83,3 @@ Grafana automatically replaces `$hostname` with the value selected in the dropdo
 
 Grafana variables allow you to make dashboards **interactive**.  
 Instead of editing SQL queries manually, you can filter PostgreSQL data using dropdowns that control your queries dynamically.
-
----
-
-## ⚠️ Important Security Note
-
-Avoid displaying **username** and **password** fields in dashboards unless this is strictly for **lab, demo, or testing purposes**.  
-For production environments, always follow proper credential management and security best practices.
