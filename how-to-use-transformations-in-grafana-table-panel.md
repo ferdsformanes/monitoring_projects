@@ -55,26 +55,6 @@ WHERE hostname IN ($hostname);
 
 ------------------------------------------------------------------------
 
-## Step 6: Filter Rows (Optional)
-
-### Transformation: Filter data by values
-
--   Filter rows without modifying the SQL query
-
-------------------------------------------------------------------------
-
-## Step 7: Convert or Format Fields (Optional)
-
-### Transformation: Convert field type
-
-------------------------------------------------------------------------
-
-## Step 8: Combine Multiple Transformations
-
--   Transformations run **top to bottom**
-
-------------------------------------------------------------------------
-
 ## Step 9: Apply and Save the Dashboard
 
 -   Click **Apply**
