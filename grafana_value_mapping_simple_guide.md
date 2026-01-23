@@ -16,9 +16,15 @@
 
 ## 4. Add a Mapping
 - Click **Add a mapping**.
-- Enter the value, range, or regex.
-- Type the text you want to show.
-- (Optional) Choose a color.
+### 🟢 UP Mapping
+- **Value**: `up`
+- **Text**: 🟢 **UP**
+- **Color**: Green
+
+### 🔴 DOWN Mapping
+- **Value**: `down`
+- **Text**: 🔴 **DOWN**
+- **Color**: Red
 
 ## 5. Check Your Panel
 - Make sure the mapping changes the value.
