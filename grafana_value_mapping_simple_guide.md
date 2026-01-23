@@ -15,16 +15,16 @@
 - **Regex to text** – for pattern matching.
 
 ## 4. Add a Mapping
-- Click **Add a mapping**.
-### 🟢 UP Mapping
-- **Value**: `up`
-- **Text**: 🟢 **UP**
-- **Color**: Green
-
-### 🔴 DOWN Mapping
-- **Value**: `down`
-- **Text**: 🔴 **DOWN**
-- **Color**: Red
+  - Click **Add a mapping**.
+  ### 🟢 UP Mapping
+  - **Value**: `up`
+  - **Text**: 🟢 **Up**
+  - **Color**: Green
+  
+  ### 🔴 DOWN Mapping
+  - **Value**: `down`
+  - **Text**: 🔴 **Down**
+  - **Color**: Red
 
 ## 5. Check Your Panel
 - Make sure the mapping changes the value.
