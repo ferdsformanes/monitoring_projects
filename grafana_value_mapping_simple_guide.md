@@ -6,9 +6,9 @@
 - Go to your dashboard.
 - Add a new panel or edit an existing one.
 
-## 2. Go to the Field Tab
-- On the right panel, select **Field**.
-- Scroll to find **Value mappings**.
+## 2. Click on the Search icon and 
+- Search for **Value mappings**
+- Or scroll to find **Value mappings**.
 
 ## 3. Choose Mapping Type
 - **Value** – match a specific text value.
