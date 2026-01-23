@@ -27,13 +27,13 @@
 ## 4️⃣ Add Status Mappings
 - Click **Add a mapping**
 
-### 🟢 UP Mapping
+### 🟢 Up Mapping
 - **Value**: `up`
-- **Text**: 🟢 **UP**
+- **Text**: 🟢 **Up**
 
-### 🔴 DOWN Mapping
+### 🔴 Down Mapping
 - **Value**: `down`
-- **Text**: 🔴 **DOWN**
+- **Text**: 🔴 **Down**
 
 - Click **Update**
 
@@ -44,5 +44,3 @@
 - Click **Save dashboard**
 
 ---
-
-✅ Your Grafana panel now shows clear and visual device status indicators.
