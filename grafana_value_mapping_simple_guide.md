@@ -1,5 +1,6 @@
 
-# Simple Guide: How to Use Value Mapping in Grafana
+# How to Use Value Mapping in Grafana
+  Value mapping makes your dashboards more readable and user-friendly.
 
 ## 1. Open or Create a Panel
 - Go to your dashboard.
@@ -10,25 +11,19 @@
 - Scroll to find **Value mappings**.
 
 ## 3. Choose Mapping Type
-- **Value to text** – for exact numbers.
-- **Range to text** – for numeric ranges.
-- **Regex to text** – for pattern matching.
+- **Value** – match a specific text value.
 
 ## 4. Add a Mapping
   - Click **Add a mapping**.
   ### 🟢 UP Mapping
   - **Value**: `up`
   - **Text**: 🟢 **Up**
-  - **Color**: Green
   
   ### 🔴 DOWN Mapping
   - **Value**: `down`
   - **Text**: 🔴 **Down**
-  - **Color**: Red
-
+  - Click Update
+  - 
 ## 5. Check Your Panel
 - Make sure the mapping changes the value.
-- Add an "undefined" mapping if needed.
-
-## That’s it!
-Value mapping makes your dashboards more readable and user-friendly.
+- Click Save dashboard
