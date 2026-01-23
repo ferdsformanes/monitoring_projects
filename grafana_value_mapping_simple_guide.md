@@ -15,11 +15,11 @@
 
 ## 4. Add a Mapping
   - Click **Add a mapping**.
-  ### 🟢 UP Mapping
+  ### 🟢 Up Mapping
   - **Value**: `up`
   - **Text**: 🟢 **Up**
   
-  ### 🔴 DOWN Mapping
+  ### 🔴 Down Mapping
   - **Value**: `down`
   - **Text**: 🔴 **Down**
   - Click Update
