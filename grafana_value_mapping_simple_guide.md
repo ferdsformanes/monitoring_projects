@@ -6,7 +6,7 @@
 
 ## 1️⃣ Open or Create a Panel
 - Go to your Grafana dashboard
-- Add a new panel or edit an existing one
+- Add a Table panel or edit an existing one
 
 ---
 
