@@ -1,4 +1,4 @@
-# 🎯 How to Use Value Mapping in Grafana
+# 🎯 How to Use Value Mappings in Grafana
 
 **Value mapping** makes your dashboards more readable and user-friendly by converting raw values into meaningful text or icons.
 
