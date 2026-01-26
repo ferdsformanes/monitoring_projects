@@ -1,144 +1,65 @@
-# How to Use Overrides in Grafana 12 (Table Panel – PostgreSQL)
+# How to Add Field Overrides in Grafana | Table Panel Tutorial
 
-Overrides are used to customize how a single column is displayed in Grafana, while the rest of the panel stays the same.
-
-
-## 1. Open the Existing Table Panel
-
-1. Hover over your **Table panel**
-2. Click **Edit**
+This tutorial shows how to use **field overrides** in a Grafana **Table panel**, focusing only on the **Status** and **Time** columns.
 
 ---
 
-## 2. Open the Overrides Section
+## Step 1: Open the Table Panel
 
-1. In the **right-hand configuration panel**
-2. Click **Overrides**
-
-Overrides allow you to control formatting and behavior for individual columns.
+* Hover over your **Table panel**
+* Click **Edit**
 
 ---
 
-## 3. Add Field Overrides
+## Step 2: Go to Overrides
+
+* In the **right-hand panel**
+* Click **Overrides**
+
+This section allows you to control how **individual fields (columns)** are displayed.
+
+---
+
+## Step 3: Add an Override for the Status Column
 
 1. Click **Add an override**
-2. Choose **Fields with name**
-3. Select the column you want to customize
+2. Select **Fields with name**
+3. Choose `status`
 
-Repeat the steps below for each field.
+### Configure the Status Override
 
----
-
-### Status Column (`status`)
-
-**Goal:** Make device state immediately visible
-
-* Property: **Cell display mode**
-
-  * Set to **Badge**
-* Property: **Value mappings**
+* **Cell display mode** → Badge
+* **Value mappings**
 
   * `Up` → Green
   * `Down` → Red
-* (Optional) **Thresholds**
 
-  * Green = Up
-  * Red = Down
-
-**Result:** Device status is visible at a glance.
+**Result:** The Status column is displayed as a colored badge.
 
 ---
 
-### Time Column (`time`)
+## Step 4: Add an Override for the Time Column
 
-**Goal:** Display readable timestamps
+1. Click **Add an override**
+2. Select **Fields with name**
+3. Choose `time`
 
-* Property: **Unit**
+### Configure the Time Override
 
-  * Date & Time → Date Time (local or ISO)
+* **Unit** → Date & Time
 
-**Result:** Clean and human-readable timestamps.
-
----
-
-### IP Address Column (`ip_address`)
-
-**Goal:** Improve scan readability
-
-* Property: **Cell type** → Auto
-* Property: **Alignment** → Left
-
-**Result:** IP addresses remain easy to scan.
+**Result:** The Time column is formatted as a readable timestamp.
 
 ---
 
-### Hostname Column (`hostname`)
+## Step 5: Apply Changes
 
-**Goal:** Emphasize the primary identifier
-
-* Property: **Cell type** → Auto
-* (Optional) **Text size** → Slightly larger
-
-**Result:** Hostnames become the visual anchor of the table.
+* Click **Apply** (top-right)
 
 ---
 
-### Device Type Column (`device_type`)
+## Key Takeaway
 
-**Goal:** Visually distinguish device roles
+> **Field overrides let you format specific columns—like Status and Time—without changing the query or affecting other fields in the table.**
 
-* Property: **Cell display mode** → Badge (optional)
-* (Optional) **Value mappings**:
-
-  * Router → Blue
-  * Switch → Purple
-  * Firewall → Orange
-
-**Result:** Device roles are instantly recognizable.
-
----
-
-### Location Column (`location`)
-
-**Goal:** Keep location data clean and readable
-
-* Property: **Alignment** → Left
-
-No additional formatting required.
-
----
-
-### Sensitive Columns (`username`, `password`)
-
-**Goal:** Reduce noise and avoid exposing credentials
-
-* Property: **Hide field**
-
-**Result:** A cleaner table with sensitive data removed.
-
----
-
-## 4. Optional: Global Numeric Alignment
-
-If you later add numeric fields (uptime, latency, counters):
-
-1. Add override → **Fields with type → Number**
-2. Property: **Alignment → Right**
-
----
-
-## 5. Apply Changes
-
-* Click **Apply** in the top-right corner
-
----
-
-## Final Outcome
-
-After applying these overrides, your table panel will:
-
-* Highlight **device status visually**
-* Display **readable timestamps**
-* Emphasize **hostnames**
-* Hide **sensitive or noisy fields**
-* Look intentional and production-ready instead of default Grafana styling
+This makes overrides ideal for demonstrations and tutorials, where you want to highlight specific fields while leaving the rest of the data unchanged.
