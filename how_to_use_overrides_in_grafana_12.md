@@ -28,13 +28,8 @@ This section allows you to control how **individual fields (columns)** are displ
 
 ### Configure the Status Override
 
-* **Cell display mode** → Badge
-* **Value mappings**
-
-  * `Up` → Green
-  * `Down` → Red
-
-**Result:** The Status column is displayed as a colored badge.
+* **Cell options > Cell type** → Colored Background
+* **Standard options > Color scheme** → Single color > Gray
 
 ---
 
@@ -46,7 +41,7 @@ This section allows you to control how **individual fields (columns)** are displ
 
 ### Configure the Time Override
 
-* **Unit** → Date & Time
+* **Standard options > Unit** → Datetime ISO
 
 **Result:** The Time column is formatted as a readable timestamp.
 
