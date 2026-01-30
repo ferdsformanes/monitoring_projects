@@ -1,5 +1,5 @@
 
-# How to Create Your First Grafana Dashboard (Beginner Tutorial)
+# How to Create Your First Grafana Dashboard
 
 This guide helps you build your first **Grafana dashboard** using **fake sample data** from the TestData datasource.
 
