@@ -1,6 +1,6 @@
 # How to Import Dashboards in Grafana
 
-This guide walks you through importing existing **Grafana dashboards** using either a **Grafana.com dashboard ID** or a **JSON file**.
+This guide walks you through importing existing **Grafana dashboards**. There are **two ways** to import a dashboard: using a **Grafana.com dashboard ID** or a **JSON file**.
 
 ---
 
@@ -22,11 +22,12 @@ This guide walks you through importing existing **Grafana dashboards** using eit
 ## Step 3: Import Using Grafana.com Dashboard ID
 
 1. Go to [Grafana Dashboards](https://grafana.com/grafana/dashboards) and find a dashboard you want to import.
-2. Copy the **Dashboard ID** (number).
-3. In Grafana, under the **Import** page, paste the Dashboard ID.
-4. Click **Load**.
-5. Choose the **Data source** you want the dashboard to use.
-6. Click **Import**.
+2. Copy the **Dashboard ID** (number shown on Grafana.com).
+3. In Grafana, under the **Import** page, select **Import via Grafana.com Dashboard ID**.
+4. Paste the Dashboard ID into the field.
+5. Click **Load**.
+6. Choose the **Data source** you want the dashboard to use.
+7. Click **Import**.
 
 ---
 
@@ -58,4 +59,4 @@ This guide walks you through importing existing **Grafana dashboards** using eit
 
 ## Key Takeaway
 
-Importing dashboards is a **quick way to get pre-built panels and visualizations**. Once comfortable, you can modify imported dashboards or create your own from scratch.
+There are **two ways to import dashboards in Grafana**: using a **Grafana.com dashboard ID** or a **JSON file**. Importing dashboards is a **quick way to get pre-built panels and visualizations**. Once comfortable, you can modify imported dashboards or create your own from scratch.
