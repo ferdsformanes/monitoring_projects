@@ -1,13 +1,13 @@
-# Adding PostgreSQL 17-1 as a Data Source in Grafana 12
+# Adding PostgreSQL as a Data Source in Grafana 1
 
-This guide shows how to add a **PostgreSQL 17-1** database as a data source in **Grafana 12**, using a local database running on port **5433**.
+This guide shows how to add a PostgreSQL database as a data source in Grafana, using a local database running on port **5433**.
 
 ---
 
 ## Prerequisites
 
 - Grafana 12 is installed and running
-- PostgreSQL 17-1 is running and accessible
+- PostgreSQL 17 running and accessible
 - Database connection details:
 
 | Setting        | Value        |
