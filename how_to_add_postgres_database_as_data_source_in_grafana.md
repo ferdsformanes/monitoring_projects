@@ -51,34 +51,7 @@ Fill in the fields exactly as follows:
 
 ---
 
-### 5. Configure TLS / SSL
-
-Under **TLS/SSL Mode**, select:
-
-```
-disable
-```
-
----
-
-### 6. PostgreSQL Version
-
-- Grafana will automatically detect the PostgreSQL version.
-- PostgreSQL **17** works without additional configuration.
-
----
-
-### 7. (Optional) Connection Limits
-
-You may leave these at default values:
-
-- Max open connections
-- Max idle connections
-- Connection max lifetime
-
----
-
-### 8. Test the Connection
+### 5. Test the Connection
 
 1. Scroll down.
 2. Click **Test connection**.
@@ -91,7 +64,7 @@ Data source is working
 
 ---
 
-### 9. Save the Data Source
+### 6. Save the Data Source
 
 1. Click **Save & test**.
 2. PostgreSQL is now ready for use in dashboards.
