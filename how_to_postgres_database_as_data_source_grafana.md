@@ -12,6 +12,7 @@ This guide shows how to add a PostgreSQL database as a data source in Grafana, u
 
 | Setting        | Value        |
 |---------------|--------------|
+| Name           | grafana-postgresql-datasource |
 | Host           | localhost    |
 | Port           | 5433         |
 | Database name  | testdb       |
@@ -79,7 +80,7 @@ disable
 ### 6. PostgreSQL Version
 
 - Grafana will automatically detect the PostgreSQL version.
-- PostgreSQL **17-1** works without additional configuration.
+- PostgreSQL **17** works without additional configuration.
 
 ---
 
