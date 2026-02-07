@@ -4,24 +4,6 @@ This guide shows how to add a PostgreSQL database as a data source in Grafana, u
 
 ---
 
-## Prerequisites
-
-- Grafana 12 is installed and running
-- PostgreSQL 17 running and accessible
-- Database connection details:
-
-| Setting        | Value        |
-|---------------|--------------|
-| Name           | grafana-postgresql-datasource |
-| Host           | localhost    |
-| Port           | 5433         |
-| Database name  | testdb       |
-| Username       | postgres     |
-| Password       | postgres     |
-| TLS/SSL Mode   | disable      |
-
----
-
 ## Step-by-Step Instructions
 
 ### 1. Log in to Grafana
@@ -57,13 +39,15 @@ Fill in the fields exactly as follows:
 
 #### Basic Settings
 
-| Field | Value |
-|-----|------|
-| **Name** | PostgreSQL_TestDB |
-| **Host** | localhost:5433 |
-| **Database** | testdb |
-| **User** | postgres |
-| **Password** | postgres |
+| Setting        | Value        |
+|---------------|--------------|
+| Name           | grafana-postgresql-datasource |
+| Host           | localhost    |
+| Port           | 5433         |
+| Database name  | testdb       |
+| Username       | postgres     |
+| Password       | postgres     |
+| TLS/SSL Mode   | disable      |
 
 ---
 
