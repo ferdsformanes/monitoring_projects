@@ -1,4 +1,4 @@
-# Adding PostgreSQL as a Data Source in Grafana 1
+# Adding PostgreSQL as a Data Source in Grafana
 
 This guide shows how to add a PostgreSQL database as a data source in Grafana, using a local database running on port **5433**.
 
