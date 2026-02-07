@@ -40,7 +40,7 @@ http://localhost:3000
 
 1. Click the **Settings (⚙️)** icon on the left sidebar.
 2. Select **Data Sources**.
-3. Click **Add data source**.
+3. Click **Add new data source**.
 
 ---
 
