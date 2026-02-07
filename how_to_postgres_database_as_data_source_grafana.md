@@ -118,17 +118,14 @@ Data source is working
 
 1. Go to **Dashboards** → **New dashboard**.
 2. Click **Add panel**.
-3. Select **PostgreSQL_TestDB** as the data source.
+3. Select **grafana-postgresql-datasource** as the data source.
 4. Example SQL query:
 
 ```sql
-SELECT
-  NOW() as time,
-  count(*) as value
-FROM your_table;
+SELECT * FROM network_devices;
 ```
 
-5. Choose a visualization.
+5. Choose Table panel.
 6. Save the dashboard.
 
 ---
