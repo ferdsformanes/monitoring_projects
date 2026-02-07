@@ -1,158 +1,145 @@
-# Add PostgreSQL as a Data Source in Grafana 12 (Step-by-Step)
+# Adding PostgreSQL 17-1 as a Data Source in Grafana 12
 
-This guide walks you through adding **PostgreSQL** as a data source in **Grafana 12** using the Grafana UI.
+This guide shows how to add a **PostgreSQL 17-1** database as a data source in **Grafana 12**, using a local database running on port **5433**.
 
 ---
 
 ## Prerequisites
 
-Before you start, make sure you have:
+- Grafana 12 is installed and running
+- PostgreSQL 17-1 is running and accessible
+- Database connection details:
 
-- Grafana **v12.x** installed and running
-- PostgreSQL running and accessible from the Grafana server
-- PostgreSQL credentials:
-  - Host
-  - Port (default: `5432`)
-  - Database name
-  - Username
-  - Password
-- A Grafana user with **Admin** or **Editor** permissions
+| Setting        | Value        |
+|---------------|--------------|
+| Host           | localhost    |
+| Port           | 5433         |
+| Database name  | testdb       |
+| Username       | postgres     |
+| Password       | postgres     |
+| TLS/SSL Mode   | disable      |
 
 ---
 
-## Step 1: Log in to Grafana
+## Step-by-Step Instructions
 
-1. Open your browser.
+### 1. Log in to Grafana
+
+1. Open a browser.
 2. Go to:
-   ```
-   http://localhost:3000
-   ```
-   (or your Grafana server URL)
-3. Log in using your Grafana credentials.
+
+```
+http://localhost:3000
+```
+
+3. Log in with your Grafana credentials.
 
 ---
 
-## Step 2: Open Data Sources
+### 2. Open Data Sources
 
-1. In the left sidebar, click **Connections**.
-2. Select **Data sources**.
-3. Click **Add new data source**.
-
----
-
-## Step 3: Select PostgreSQL
-
-1. In the list of available data sources, search for **PostgreSQL**.
-2. Click **PostgreSQL**.
-
-Grafana will open the PostgreSQL configuration page.
+1. Click the **Settings (⚙️)** icon on the left sidebar.
+2. Select **Data Sources**.
+3. Click **Add data source**.
 
 ---
 
-## Step 4: Configure PostgreSQL Connection
+### 3. Select PostgreSQL
 
-Fill in the following fields:
-
-### Connection Details
-
-- **Host**
-  ```
-  localhost:5432
-  ```
-  (Replace with your PostgreSQL host and port)
-
-- **Database**
-  ```
-  your_database_name
-  ```
-
-- **User**
-  ```
-  your_username
-  ```
-
-- **Password**
-  ```
-  your_password
-  ```
-
-> Tip: Click **Save & test** later to verify credentials.
+1. From the list of available data sources, click **PostgreSQL**.
 
 ---
 
-## Step 5: Configure PostgreSQL Options
+### 4. Configure PostgreSQL Connection
 
-### SSL Mode
-Choose one based on your setup:
-- `disable` â Local or non-SSL connections
-- `require` â Common for production environments
+Fill in the fields exactly as follows:
 
-### TimescaleDB (Optional)
-- Enable **TimescaleDB** only if your PostgreSQL uses TimescaleDB extensions.
+#### Basic Settings
 
----
-
-## Step 6: Set Time Column Defaults (Recommended)
-
-In the **PostgreSQL details** section:
-
-- **Time column name**
-  ```
-  time
-  ```
-  (or your actual timestamp column)
-
-- **Metric column**
-  ```
-  none
-  ```
-  (Used mainly for legacy queries)
+| Field | Value |
+|-----|------|
+| **Name** | PostgreSQL_TestDB |
+| **Host** | localhost:5433 |
+| **Database** | testdb |
+| **User** | postgres |
+| **Password** | postgres |
 
 ---
 
-## Step 7: Save and Test
+### 5. Configure TLS / SSL
 
-1. Click **Save & test**.
-2. If successful, you will see:
-   ```
-   Database Connection OK
-   ```
+Under **TLS/SSL Mode**, select:
 
-If it fails, double-check:
-- Host and port
-- Credentials
-- Firewall or network access
-- PostgreSQL `pg_hba.conf` settings
-
----
-
-## Step 8: Use PostgreSQL in a Dashboard
-
-1. Go to **Dashboards** â **New** â **New dashboard**.
-2. Click **Add visualization**.
-3. Select **PostgreSQL** as the data source.
-4. Write your SQL query.
-
-### Example Query
-
-```sql
-SELECT
-  NOW() as time,
-  COUNT(*) as value
-FROM users;
+```
+disable
 ```
 
 ---
 
-## Notes & Best Practices
+### 6. PostgreSQL Version
 
-- Use indexed timestamp columns for better performance
-- Avoid `SELECT *` in dashboards
-- Limit time ranges when querying large tables
-- Use views for complex queries
+- Grafana will automatically detect the PostgreSQL version.
+- PostgreSQL **17-1** works without additional configuration.
 
 ---
 
-## Youâre All Set ð
+### 7. (Optional) Connection Limits
 
-Your PostgreSQL data source is now connected to Grafana 12 and ready for dashboards and visualizations.
+You may leave these at default values:
+
+- Max open connections
+- Max idle connections
+- Connection max lifetime
+
+---
+
+### 8. Test the Connection
+
+1. Scroll down.
+2. Click **Test connection**.
+
+If successful, you will see:
+
+```
+Data source is working
+```
+
+---
+
+### 9. Save the Data Source
+
+1. Click **Save & test**.
+2. PostgreSQL is now ready for use in dashboards.
+
+---
+
+## Using PostgreSQL in a Dashboard
+
+1. Go to **Dashboards** → **New dashboard**.
+2. Click **Add panel**.
+3. Select **PostgreSQL_TestDB** as the data source.
+4. Example SQL query:
+
+```sql
+SELECT
+  NOW() as time,
+  count(*) as value
+FROM your_table;
+```
+
+5. Choose a visualization.
+6. Save the dashboard.
+
+---
+
+## Notes
+
+- Port **5433** is non-default; ensure PostgreSQL is listening on this port.
+- If Grafana and PostgreSQL are on different machines, replace `localhost` with the PostgreSQL server IP.
+- Authentication issues usually relate to credentials or `pg_hba.conf`.
+
+---
+
+## Reference
+
+https://grafana.com/docs/grafana/latest/datasources/postgres/
