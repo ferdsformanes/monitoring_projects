@@ -139,5 +139,4 @@ SELECT * FROM network_devices;
 ---
 
 ## Reference
-
-https://grafana.com/docs/grafana/latest/datasources/postgres/
+https://grafana.com/docs/grafana/latest/datasources/postgres/configure/
