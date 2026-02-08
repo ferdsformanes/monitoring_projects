@@ -1,4 +1,4 @@
-# How to Create a New Organization in Grafana 12
+# How to Create a New Organization in Grafana
 
 ## Prerequisites
 - You must be signed in as a **Grafana Server Administrator**.
