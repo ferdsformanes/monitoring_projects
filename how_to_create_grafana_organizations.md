@@ -52,3 +52,6 @@ You can now configure settings specific to the new organization:
   - Alerts
   - Folders
 - This is useful for separating teams, environments (prod vs lab), or customers.
+
+## Reference
+- https://grafana.com/docs/grafana/latest/administration/organization-management/
