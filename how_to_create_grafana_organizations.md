@@ -6,9 +6,8 @@
 ## Verify You Are a Server Administrator
 Before creating a new organization, make sure you’re logged in as a **Grafana Server Admin**:
 
-1. Click your **profile icon** (top-right).
-2. Go to **Administration**.
-3. If you can see **Administration → General → Organizations**, you are a **server administrator**.
+1. Go to **Administration**.
+2. If you can see **Administration → General → Organizations**, you are a **server administrator**.
 
 > Only server admins can create and manage organizations.
 
