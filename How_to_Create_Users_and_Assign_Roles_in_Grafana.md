@@ -2,14 +2,13 @@
 
 ## Prerequisites
 - You must be logged in as a **Grafana Server Administrator**.
-- Grafana authentication must allow **local users** (default behavior).
+- If Grafana uses SSO (LDAP, OAuth, or SAML), local users can usually still log in unless the login form has been disabled by an administrator.
 
 ## Step 1: Verify You Are a Server Administrator
 Before creating users:
 
-1. Click your **profile icon** (top-right).
-2. Go to **Administration**.
-3. If you can access **Administration → Users and access**, you are a **server administrator**.
+1. Go to **Administration**.
+2. If you can access **Administration → Users and access**, you are a **server administrator**.
 
 > Only server administrators can create users and manage global access.
 
