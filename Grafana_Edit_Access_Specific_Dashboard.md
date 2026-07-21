@@ -1,4 +1,4 @@
-# How to Grant Users Edit Access to a Specific Dashboard Only in Grafana
+# How to Grant Users Edit Access to a Specific Dashboard in Grafana
 
 1. Open the dashboard that you want the user to edit.
 2. Click **Dashboard Settings** (gear icon) in the upper-right corner.
